@@ -1,0 +1,32 @@
+# Captive Portal Configuration with pfSense
+
+## Overview
+This repository illustrates the successful configuration of a captive portal using pfSense, as part of Lab 2.4.6 in TestOut CyberDefense Pro's English 2.0 course. The objective of this lab was to create a restricted guest Wi-Fi network with specific access controls.
+
+## Lab Tasks
+- Add a captive portal zone named WiFi-Guest.
+- Configure the captive portal with specific settings.
+- Allow a MAC address and an IP address to pass through the portal.
+
+## Implementation Details
+- Captive Portal Zone: WiFi-Guest
+  - Description: Guest wireless access zone
+
+- Captive Portal Configuration (GuestWi-Fi interface):
+  - Maximum concurrent connections: 50
+  - Idle timeout: 15 minutes
+  - Hard timeout: 45 minutes
+  - Bandwidth restriction: 7000 Kbit/s download, 2400 Kbit/s upload
+  - Authentication: None (no user authentication required)
+
+- Allowed MAC Address:
+  - MAC Address: 00:00:1C:11:22:33
+
+- Allowed IP Address:
+  - IP Address: 198.28.1.100/16
+  - Description: Security analyst's laptop
+
+## Lab Report
+- Score: 4/4 (100%)
+
+Feel free to explore this repository to understand how to set up a captive portal with specific access controls using pfSense. It's a valuable addition to your GitHub portfolio.
